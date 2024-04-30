@@ -1,0 +1,14 @@
+<%= form_with(model: room) do |form| %>
+  <% room.errors.each do |error| %>
+    <p class="text-danger"><strong><%= error.full_message %></strong></p>
+  <% end %>
+
+  <div class="form-group mb-3">
+    <%= form.text_field :name, class: 'form-control', placeholder: 'Name' %>
+  </div>
+
+  <div class="actions mb-3">
+    <%= form.submit class: 'btn btn-sm btn-primary' %>
+    <%= link_to 'Cancel', room.new_record? ? rooms_path : room, class: 'btn btn-sm btn-secondary' %>
+  </div>
+<% end %>

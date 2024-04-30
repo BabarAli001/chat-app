@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+
+@import "bootstrap";
+
+.profile-picture {
+  height: 100px;
+  border-radius: 50px;
+  margin: 5px;
+}
